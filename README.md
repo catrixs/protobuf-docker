@@ -1,8 +1,16 @@
 # What is this
 
-The smallest protobuffer image. You could pull it from: ```docker pull chenfei/protobuf:2.4.1```.
+The smallest protobuffer image, just only 16M.
 
-This image has default CMD like this: ```protoc -I /protobuf/src --java_out=/protobuf/out /protobuf/src/*.proto```. So you run docker with volume like this: ```docker run --rm -it -v $YOUR_PROTO_FILE_PATH:/protobuf/src -v $YOUR_PROTO_OUT:/protobuf/out chenfei/protobuf:2.4.1```. Of Course you could override default CMD: ```docker run --rm -it -v $YOUR_PROTO_FILE_PATH:/protobuf/src -v $YOUR_PROTO_OUT:/protobuf/out chenfei/protobuf:2.4.1 sh```
+# How to use
+
+Pull: ```docker pull chenfei/protobuf:2.4.1```.
+
+CMD: ```protoc -I /protobuf/src --java_out=/protobuf/out /protobuf/src/*.proto```
+
+RUN: ```docker run --rm -it -v $YOUR_PROTO_FILE_PATH:/protobuf/src -v $YOUR_PROTO_OUT:/protobuf/out chenfei/protobuf:2.4.1```
+
+RUN: ```docker run --rm -it -v $YOUR_PROTO_FILE_PATH:/protobuf/src -v $YOUR_PROTO_OUT:/protobuf/out chenfei/protobuf:2.4.1 sh```
 
 # How it works
 
