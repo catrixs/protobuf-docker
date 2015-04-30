@@ -4,7 +4,7 @@ RUN apt-get update \
     && apt-get -y install gcc g++ make wget unzip
 
 RUN cd /tmp \
-    && wget https://github.com/google/protobuf/releases/download/v2.4.1/protobuf-2.5.0.zip \
+    && wget https://github.com/google/protobuf/releases/download/v2.5.0/protobuf-2.5.0.zip \
     && unzip protobuf-2.5.0.zip \
     && cd protobuf-2.5.0 \
     && ./configure --prefix=/usr --disable-shared \
